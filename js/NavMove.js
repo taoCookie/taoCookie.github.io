@@ -1,35 +1,28 @@
-/**
- ** Created by Reido on 2018/7/1.
- **/
 
 (function () {
-    //鑾峰彇鍏冪礌
     var NavLi = $(".menu li");
     var Content = $(".js-container");
     var Move = $(".navmove");
-    //鍙傛暟鍜屽紑鍏�
-    var length = Content.length; //鐗堝潡鏁伴噺
-    var index = 0; //瀵艰埅涓嬫爣
+    var length = Content.length; 
+    var index = 0;
     var onOff = true;
-    var flag; //閿氱偣浣嶇疆
-    var prevWidth; //閿氱偣鍏冪礌瀹藉害
+    var flag; 
+    var prevWidth;
 
-    var $left; //鍏冪礌浣嶇疆
-    var $width; //鍏冪礌瀹藉害
+    var $left; 
+    var $width;
     NavMove();
     $('.menu').each(function () {
         NavLi.mouseenter(function () {
             index = $(this).index();
             $left = $(this).offset().left;
             $width = $(this).width();
-            // 榧犳爣绉诲叆婊戝潡璺熼殢
             NavLi.mousemove(function () {
                 Move.css({
                     'left': $left,
                     'width': $width
                 });
             });
-            // 榧犳爣鐐瑰嚮婊戝潡鍥哄畾
             NavLi.click(function () {
                 Move.css({
                     'left': $left,
@@ -38,7 +31,6 @@
                 flag = $left;
                 prevWidth = $width;
             })
-            // 榧犳爣绉诲嚭婊戝潡杩斿洖閿氱偣
             NavLi.mouseout(function () {
                 Move.css({
                     'left': flag,
