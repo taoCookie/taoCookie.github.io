@@ -77,8 +77,7 @@ UnU = !UnU;
 });
 
 $('.logo').css('animation', 'music 5s infinite linear');
-var musicUrl =
-'http://m10.music.126.net/20190916143513/acde831ac3c7a847b2ed9c3fb5eeb472/ymusic/98ac/fcc6/79bd/196991cba5a34d1feb099001ce1ad2b1.mp3';
+var musicUrl = 'https://m7.music.126.net/20190916183115/a969a37c4c5737d2db50ea9e1eeab103/ymusic/bb04/efa9/ba95/d86e7e83bc95ddb96bcf344b8e139728.mp3';
 $('#audio').attr("src", musicUrl);
 
 function play() {
